@@ -1,0 +1,19 @@
+# versão
+version: '3.8'
+# setando serviços utilizados (Postgres)
+services:
+  db : # serviço do tipo db
+    image: postgres:latest
+    container_name: PostgreSQL-sacola
+    restart: always
+    environment: # variaveis de ambiente
+      POSTGRES_USER: postgres # superuser
+      POSTGRES_PASSWORD: admin123 # senha
+      POSTGRES_DB: sacola_db # banco de dados
+    volumes: # volume onde está a base de dados
+      - ./data/db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+volumes:
+  postgres-data:
+    driver: bridge # driver para conexão com o container (bridge) e não com o server local do postgres (local)
