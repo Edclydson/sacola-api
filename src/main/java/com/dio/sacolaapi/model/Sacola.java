@@ -1,6 +1,6 @@
 package com.dio.sacolaapi.model;
 
-import com.dio.sacolaapi.enumeration.*;
+import com.dio.sacolaapi.model.enumeration.FormaPagamento;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
